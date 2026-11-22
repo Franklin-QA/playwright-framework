@@ -1,0 +1,21 @@
+{
+  "name": "playwright-ts-e2e-framework",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript UI and API test framework with page objects, fixtures, accessibility checks and sharded CI",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=chromium --project=firefox",
+    "test:api": "playwright test --project=api",
+    "test:a11y": "playwright test --grep @a11y",
+    "test:headed": "playwright test --project=chromium --headed",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.0",
+    "@playwright/test": "1.47.2",
+    "@types/node": "20.14.15",
+    "typescript": "5.5.4"
+  }
+}
